@@ -1,46 +1,86 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage[
-left=1.5cm,
-right=1.5cm,
-top=1cm,
-bottom=1cm,
-% includeheadfoot
-]{geometry}
-
+\documentclass[a4paper]{article}
+\usepackage[left=0.5in, right=0.5in, top=1in, bottom=1in, landscape]{geometry}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{colortbl}
 \usepackage{multirow}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{makecell}
+\usepackage{wasysym}
 
+\newcolumntype{Y}{>{\centering\arraybackslash}p{0.6cm}}
+\newcolumntype{Z}{>{\centering\arraybackslash}p{2cm}}
+\newcolumntype{C}{>{\centering\arraybackslash}m{0.6cm}}
 
+\setlength{\arrayrulewidth}{0.4pt} % Define the thickness of lines
+
+\newcommand{\mytable}{
+  \begin{center}
+  \Large{\textbf{Exercise: } \underline{\hspace{4cm}}}
+  \end{center}
+
+  \begin{tabular}{!{\vline width 1pt}Z!{\vline width 1pt}Y|Y!{\vline width 1pt}Y|Y!{\vline width 1pt}Y|Y!{\vline width 1pt}Y|Y!{\vline width 1pt}C|c!{\vline width 1pt}}
+    \noalign{\hrule height 1pt}
+
+    \rowcolor{gray!20}
+    &
+    \multicolumn{2}{c!{\vline width 1pt}}{\textbf{Set 1}} &
+    \multicolumn{2}{c!{\vline width 1pt}}{\textbf{Set 2}} &
+    \multicolumn{2}{c!{\vline width 1pt}}{\textbf{Set 3}} &
+    \multicolumn{2}{c!{\vline width 1pt}}{\textbf{Set 4}} &
+    \multicolumn{2}{c!{\vline width 1pt}}{\textbf{Gym}} \\
+    \rowcolor{gray!20}
+    & \textbf{W} & \textbf{R} & \textbf{W} & \textbf{R} & \textbf{W} & \textbf{R} & \textbf{W} & \textbf{R} & \multicolumn{1}{C|}{\textbf{AA}} & \multicolumn{1}{c!{\vline width 1pt}}{\textbf{STG}} \\
+    \noalign{\hrule height 1pt}
+    \multirow{-4}{*}{\centering\textbf{Date}} & & & & & & & & & \Square & \Square \\
+    \noalign{\hrule height 0.6pt}
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\ \hline
+    & & & & & & & & & \Square & \Square \\
+    \noalign{\hrule height 1pt}
+
+  \end{tabular}
+}
+
+\pagestyle{empty}
 
 \begin{document}
-% Please add the following required packages to your document preamble:
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[]
-  \centering
-  \Large
 
-  \begin{tabular}{|c|llllllll|}
-    \cline{1-9}
-    \textbf{Übung} & \multicolumn{8}{c|}{\textbf{Sätze}} \\ \cline{1-9}
-                   & \multicolumn{1}{l|}{}       & \multicolumn{1}{l|}{\textbf{Warmup}} & \multicolumn{1}{c|}{\textbf{1.}} & \multicolumn{1}{c|}{\textbf{2.}} & \multicolumn{1}{c|}{\textbf{3.}} & \multicolumn{1}{c|}{\textbf{4.}} & \multicolumn{1}{c|}{\textbf{5.}} & \multicolumn{1}{c|}{\textbf{6.}} \\ \Xhline{2\arrayrulewidth}
-                   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Reps}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \cellcolor[HTML]{C0C0C0}  \\ \cline{2-9}
-    \multirow{-2}{*}{\textbf{1.}~\makebox[2.5in]{\hrulefill}} & \multicolumn{1}{l|}{\textbf{Gewicht}} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \\ \cline{1-9}
-                                                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Reps}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \cellcolor[HTML]{C0C0C0} \\ \cline{2-9}
-    \multirow{-2}{*}{\textbf{2.}~\makebox[2.5in]{\hrulefill}} & \multicolumn{1}{l|}{\textbf{Gewicht}}                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         &                         \\ \cline{1-9}
-                                                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Reps}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \cellcolor[HTML]{C0C0C0}         \\ \cline{2-9}
-    \multirow{-2}{*}{\textbf{3.}~\makebox[2.5in]{\hrulefill}} & \multicolumn{1}{l|}{\textbf{Gewicht}}                      & \multicolumn{1}{l|}{}                & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         &                         \\ \cline{1-9}
-                                                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Reps}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \cellcolor[HTML]{C0C0C0}         \\ \cline{2-9}
-    \multirow{-2}{*}{\textbf{4.}~\makebox[2.5in]{\hrulefill}} & \multicolumn{1}{l|}{\textbf{Gewicht}}                      & \multicolumn{1}{l|}{}                & \multicolumn{1}{l|}{}                                  & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         &                         \\ \cline{1-9}
-                                                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Reps}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \cellcolor[HTML]{C0C0C0}         \\ \cline{2-9}
-    \multirow{-2}{*}{\textbf{5.}~\makebox[2.5in]{\hrulefill}} & \multicolumn{1}{l|}{\textbf{Gewicht}}                      & \multicolumn{1}{l|}{}                & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                                  & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         &                         \\ \cline{1-9}
-                                                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Reps}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \cellcolor[HTML]{C0C0C0}         \\ \cline{2-9}
-    \multirow{-2}{*}{\textbf{6.}~\makebox[2.5in]{\hrulefill}} & \multicolumn{1}{l|}{\textbf{Gewicht}}                      & \multicolumn{1}{l|}{}                & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                                  & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         &                         \\ \cline{1-9}
-                                                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}\textbf{Reps}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}} & \cellcolor[HTML]{C0C0C0}         \\ \cline{2-9}
-    \multirow{-2}{*}{\textbf{7.}~\makebox[2.5in]{\hrulefill}} & \multicolumn{1}{l|}{\textbf{Gewicht}}                      & \multicolumn{1}{l|}{}                & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                                  & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                         &                         \\ \cline{1-9}
-  \end{tabular}
-\end{table}
+\begin{center}
+\begin{minipage}{0.48\linewidth}
+\centering
+\mytable
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\centering
+\mytable
+\end{minipage}
+\end{center}
 
 \end{document}
